@@ -1,13 +1,17 @@
 from turtle import *
 from random import *
+
 speed(0)
 hideturtle()
 Screen().bgcolor('black')
 Screen().colormode(255)
 
+
 def move(x, y):
     '''перемещение в точку экрана по координатам'''
     penup(), goto(x, y), pendown()
+
+
 def star(x, y):
     '''звезда произвольного цвета, размера и количества сторон'''
     move(x, y)
@@ -25,9 +29,11 @@ def star(x, y):
             forward(length_star), right(180 - corner_element * 3), forward(length_star), left(180 - corner_element)
     end_fill()
 
+
 def left_mouse_click(x, y):
     '''считывание координат места клика мыши по экрану'''
     star(x, y)
+    
 
 Screen().onclick(left_mouse_click)
 Screen().listen()

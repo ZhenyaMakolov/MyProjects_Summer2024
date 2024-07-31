@@ -8,10 +8,12 @@ word_list = ['земля', 'астероид', 'звезда', 'спутник',
 
 category = ['Космический объект', 'Бытовая техника',  'Млекопитающее', 'Водоём', 'Госслужащий']
 
+
 def get_word():
     '''получаем загаданное слово'''
     res = random.choice(word_list)
     return res.upper()
+
 
 def display_hangman(tries):
     '''изображение виселицы (графическое изображение оставшихся попыток)'''
@@ -101,6 +103,7 @@ def display_hangman(tries):
     return stages[tries]
 
 eng = 'abcdefghijklmnopqrstuvwxwz'
+
 
 def play(text):
     '''игровая сессия'''
